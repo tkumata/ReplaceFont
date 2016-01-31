@@ -7,7 +7,7 @@ Good-by bitmap font. This script replace font in TextStyle.plist for ja.
 ## Usage
    1. Download this script.
    2. cd folder that you saved this script.
-   3. ./ReplaceFont.ps1 arial
+   3. ./ReplaceFont.ps1 Meiryo
    4. Open iTunes for Windows.
 
 ## Licence
