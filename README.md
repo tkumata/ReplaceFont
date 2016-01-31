@@ -1,14 +1,15 @@
 # ReplaceFont
 ## Description
-Good-by bitmap font. This script replace font in TextStyle.plist for ja.
+Good-by bitmap font. This script replaces font in TextStyle.plist for ja.
 
 !["sample"](./itunesfont.png)
 
 ## Usage
    1. Download this script.
    2. cd folder that you saved this script.
-   3. ./ReplaceFont.ps1 Meiryo
-   4. Open iTunes for Windows.
+   3. Backup original TextStyle.plist.
+   4. ./ReplaceFont.ps1 Meiryo
+   5. Open iTunes for Windows.
 
 ## Licence
 Copyright (c) 2016 tkumata
