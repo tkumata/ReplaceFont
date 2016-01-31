@@ -1,6 +1,6 @@
 # ReplaceFont
 ## Description
-Good-by dirty bitmap font. This script replaces font name in TextStyles.plist for ja. I replace Segoe to Meiryo following sample image.
+Good-by dirty bitmap font!!! This script replaces font name in TextStyles.plist for ja. I replace Segoe to Meiryo as sample image.
 
 !["sample"](./itunesfont.png)
 
@@ -9,7 +9,7 @@ Good-by dirty bitmap font. This script replaces font name in TextStyles.plist fo
    2. cd folder that you saved this script.
    3. Backup original TextStyles.plist.
    4. ./ReplaceFont.ps1 Meiryo
-   5. Overwrite TextStyles.plist by new manually.
+   5. Overwrite manually TextStyles.plist.
    6. Open iTunes for Windows.
 
 ## Licence
