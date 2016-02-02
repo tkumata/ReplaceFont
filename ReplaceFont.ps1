@@ -12,12 +12,14 @@ if ($args.length -eq 1) {
     
     if ($isFont -eq "True") {
         # path for iTunes plist file
-        $origFile = "C:\Program Files\iTunes\iTunes.Resources\ja.lproj\TextStyles.plist"
+        # $origFile = "C:\Program Files\iTunes\iTunes.Resources\ja.lproj\TextStyles.plist"
+        $origFile = "C:\Program Files\iTunes\iTunes.Resources\en.lproj\TextStyles.plist"
+        $newFile = "C:\temp\TextStyles.plist"
         
         # Change font name
-        $repdata = (cat -Path $origFile -ReadCount 0) -join "`r`n" -creplace "(<key>font</key>`r`n`t`t<string>).*?(</string>)", "`$1$fontname`$2" | Out-File C:\temp\TextStyles.plist -Encoding UTF8
+        $repdata = (cat -Path $origFile -ReadCount 0) -join "`r`n" -creplace "(<key>font</key>`r`n`t`t<string>).*?(</string>)", "`$1$fontname`$2" | Out-File $newFile -Encoding UTF8
         
-        echo "Save to C:\temp\TextStyles.plist."
+        echo "Save to $newFile."
         
         # Open folder
         ii C:\temp
