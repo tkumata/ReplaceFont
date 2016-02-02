@@ -1,3 +1,4 @@
+#
 # Replace font of iTunes for Windows for Japanese
 #
 if ($args.length -eq 1) {
@@ -12,19 +13,19 @@ if ($args.length -eq 1) {
     
     if ($isFont -eq "True") {
         # path for iTunes plist file
-        # $origFile = "C:\Program Files\iTunes\iTunes.Resources\ja.lproj\TextStyles.plist"
-        $origFile = "C:\Program Files\iTunes\iTunes.Resources\en.lproj\TextStyles.plist"
+        $origFile = "C:\Program Files\iTunes\iTunes.Resources\ja.lproj\TextStyles.plist"
         $newFile = "C:\temp\TextStyles.plist"
         
         # Change font name
         $repdata = (cat -Path $origFile -ReadCount 0) -join "`r`n" -creplace "(<key>font</key>`r`n`t`t<string>).*?(</string>)", "`$1$fontname`$2" | Out-File $newFile -Encoding UTF8
         
         echo "Save to $newFile."
+        echo "Please copy $newFile to iTunes resource folder manually."
         
         # Open folder
         ii C:\temp
     } else {
-        echo "Available font as arg[0] not found."
+        echo "Available font not found."
     }
 } else {
     echo "No argument."
