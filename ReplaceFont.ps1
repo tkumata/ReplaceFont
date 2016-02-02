@@ -8,6 +8,7 @@ if ($args.length -eq 1) {
     $families = (New-Object System.Drawing.Text.InstalledFontCollection).Families
     $isFont = $families -contains "$fontname"
     
+    #
     echo "$fontname is $isFont"
     
     if ($isFont -eq "True") {
