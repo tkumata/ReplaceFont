@@ -1,6 +1,6 @@
 # Replace font of iTunes for Windows for Japanese
 #
-if ($args[0].length -eq 1) {
+if ($args.length -eq 1) {
     $fontname = $args[0]
     
     # Check available font
