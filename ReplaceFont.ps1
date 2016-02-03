@@ -19,20 +19,20 @@ if ($args.length -eq 1) {
         # Change font name
         $repdata = (cat -Path $origFile -ReadCount 0) -join "`r`n" -creplace "(<key>font</key>`r`n`t`t<string>).*?(</string>)", "`$1$fontname`$2" | Out-File $newFile -Encoding UTF8
         
-        echo "Save to $newFile."
-        echo "Please copy $newFile to iTunes resource folder manually."
+        echo "    Save to $newFile."
+        echo "    Please copy $newFile to iTunes resource folder manually."
         
         # Open folder
         ii C:\temp
     } else {
-        echo "Available font not found."
+        echo "    Available font not found."
     }
 } else {
-    echo "No argument."
-    echo "Usage:"
-    echo "    ReplaceFont.ps1 font-name"
-    echo "ex)"
-    echo "    ReplaceFont.ps1 `"Meiryo UI`" or ReplaceFont.ps1 Meiryo"
+    echo "    No argument."
+    echo "    Usage:"
+    echo "      ReplaceFont.ps1 font-name"
+    echo "    ex)"
+    echo "      ReplaceFont.ps1 `"Meiryo UI`" or ReplaceFont.ps1 Meiryo"
 }
 
 #
